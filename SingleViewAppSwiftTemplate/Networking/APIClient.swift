@@ -99,8 +99,14 @@ extension APIClient {
           do {
             let objects = try self.decoder.decode([T].self, from: data)
             completion(.success(objects))
+          } catch let DecodingError.dataCorrupted(context) {
+            print(context)
+          } catch let DecodingError.keyNotFound(key, context) {
+            print(key, context)
+          } catch let DecodingError.typeMismatch(type, context) {
+            print(type, context)
           } catch {
-            completion(.failure(.jsonConversionFailure))
+            print(error)
           }
         case .failure(let error):
           completion(.failure(error))

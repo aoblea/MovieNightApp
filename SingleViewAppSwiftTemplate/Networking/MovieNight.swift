@@ -22,8 +22,7 @@ enum MovieNight {
   case certification(api: String)
   case genre(api: String)
   case people(api: String, page: Int)
-  case discover(api: String, language: String, sortBy: MovieNightSortType, country: String, certification: String, withPeople: String, withGenres: String)
-  
+  case discover(api: String, sortBy: MovieNightSortType, country: String, certification: [Certification], withPeople: [Person], withGenres: [Genre])
 }
 
 extension MovieNight: Endpoint {
@@ -46,15 +45,14 @@ extension MovieNight: Endpoint {
       URLQueryItem(name: "api_key", value: api.description),
       URLQueryItem(name: "page", value: page.description)
       ]
-    case .discover(let api, let language, let sortBy, let country, let certification, let withPeople, let withgenres):
+    case .discover(let api, let sortBy, let country, let certification, let withPeople, let withGenres):
       return [
         URLQueryItem(name: "api_key", value: api.description),
-        URLQueryItem(name: "language", value: language.description),
         URLQueryItem(name: "sort_by", value: sortBy.description),
         URLQueryItem(name: "certification_country", value: country.description),
-        URLQueryItem(name: "certification", value: certification.description),
-        URLQueryItem(name: "with_people", value: withPeople.description),
-        URLQueryItem(name: "with_genres", value: withgenres.description)
+        URLQueryItem(name: "certification", value: certification.compactMap { $0.certification }.joined(separator: "|")),
+        URLQueryItem(name: "with_people", value: withPeople.compactMap { $0.id.description }.joined(separator: "|")),
+        URLQueryItem(name: "with_genres", value: withGenres.compactMap { $0.id.description }.joined(separator: "|"))
       ]
     }
   }

@@ -12,6 +12,11 @@
 		3A8AADCE1DF9B85E00A2B931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */; };
 		3A8AADD01DF9B85E00A2B931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */; };
 		3A8AADD31DF9B85E00A2B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */; };
+		AE204FA7238B365E00812BDD /* GenreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE204FA6238B365E00812BDD /* GenreListViewController.swift */; };
+		AE204FA9238B379A00812BDD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE204FA8238B379A00812BDD /* User.swift */; };
+		AE204FAB238B4A6E00812BDD /* CertificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE204FAA238B4A6E00812BDD /* CertificationListViewController.swift */; };
+		AE204FAD238B4AC300812BDD /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE204FAC238B4AC300812BDD /* PersonListViewController.swift */; };
+		AE204FAF238E17C300812BDD /* ResultsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE204FAE238E17C300812BDD /* ResultsListViewController.swift */; };
 		AE21ECE62384E07B0075C45D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE21ECE52384E07B0075C45D /* HomeViewController.swift */; };
 		AE21ECEA238652DC0075C45D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE21ECE9238652DB0075C45D /* APIClient.swift */; };
 		AE21ECEE238654A20075C45D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE21ECED238654A20075C45D /* Endpoint.swift */; };
@@ -21,6 +26,13 @@
 		AE21ECF723871D9B0075C45D /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE21ECF623871D9B0075C45D /* Genre.swift */; };
 		AE21ECF923871DDA0075C45D /* Certification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE21ECF823871DDA0075C45D /* Certification.swift */; };
 		AE21ECFB23871E4B0075C45D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE21ECFA23871E4B0075C45D /* Person.swift */; };
+		AE56D9AC238EBD4500D31171 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9AB238EBD4500D31171 /* MovieDetailViewController.swift */; };
+		AE56D9B1238F67F600D31171 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9B0238F67F600D31171 /* UIColor.swift */; };
+		AE56D9B4238F745800D31171 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9B3238F745800D31171 /* Alertable.swift */; };
+		AE56D9B6238F7FF600D31171 /* GenreListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9B5238F7FF600D31171 /* GenreListDataSource.swift */; };
+		AE56D9B8238F83E900D31171 /* CertificationListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9B7238F83E900D31171 /* CertificationListDataSource.swift */; };
+		AE56D9BA238F87DF00D31171 /* PersonListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9B9238F87DF00D31171 /* PersonListDataSource.swift */; };
+		AE56D9BC238F8D4600D31171 /* ResultListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9BB238F8D4600D31171 /* ResultListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +43,11 @@
 		3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8AADD21DF9B85E00A2B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8AADD41DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE204FA6238B365E00812BDD /* GenreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListViewController.swift; sourceTree = "<group>"; };
+		AE204FA8238B379A00812BDD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AE204FAA238B4A6E00812BDD /* CertificationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationListViewController.swift; sourceTree = "<group>"; };
+		AE204FAC238B4AC300812BDD /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		AE204FAE238E17C300812BDD /* ResultsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListViewController.swift; sourceTree = "<group>"; };
 		AE21ECE52384E07B0075C45D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE21ECE9238652DB0075C45D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		AE21ECED238654A20075C45D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -40,6 +57,13 @@
 		AE21ECF623871D9B0075C45D /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		AE21ECF823871DDA0075C45D /* Certification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certification.swift; sourceTree = "<group>"; };
 		AE21ECFA23871E4B0075C45D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		AE56D9AB238EBD4500D31171 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		AE56D9B0238F67F600D31171 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		AE56D9B3238F745800D31171 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		AE56D9B5238F7FF600D31171 /* GenreListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListDataSource.swift; sourceTree = "<group>"; };
+		AE56D9B7238F83E900D31171 /* CertificationListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationListDataSource.swift; sourceTree = "<group>"; };
+		AE56D9B9238F87DF00D31171 /* PersonListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListDataSource.swift; sourceTree = "<group>"; };
+		AE56D9BB238F8D4600D31171 /* ResultListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +96,13 @@
 		3A8AADC71DF9B85E00A2B931 /* SingleViewAppSwiftTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				AE56D9B2238F73DB00D31171 /* Protocols */,
+				AE56D9AD238F676900D31171 /* Extensions */,
 				AE21ECF323871BBF0075C45D /* Models */,
+				AE56D9AF238F678B00D31171 /* View Models */,
 				AE21ECE82384EA940075C45D /* Networking */,
 				AE21ECE72384EA860075C45D /* Controllers */,
+				AE56D9AE238F677400D31171 /* Data Sources */,
 				3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */,
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */,
@@ -89,6 +117,11 @@
 			children = (
 				3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */,
 				AE21ECE52384E07B0075C45D /* HomeViewController.swift */,
+				AE204FA6238B365E00812BDD /* GenreListViewController.swift */,
+				AE204FAA238B4A6E00812BDD /* CertificationListViewController.swift */,
+				AE204FAC238B4AC300812BDD /* PersonListViewController.swift */,
+				AE204FAE238E17C300812BDD /* ResultsListViewController.swift */,
+				AE56D9AB238EBD4500D31171 /* MovieDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,8 +144,43 @@
 				AE21ECF623871D9B0075C45D /* Genre.swift */,
 				AE21ECF823871DDA0075C45D /* Certification.swift */,
 				AE21ECFA23871E4B0075C45D /* Person.swift */,
+				AE204FA8238B379A00812BDD /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AE56D9AD238F676900D31171 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE56D9B0238F67F600D31171 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE56D9AE238F677400D31171 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AE56D9B5238F7FF600D31171 /* GenreListDataSource.swift */,
+				AE56D9B7238F83E900D31171 /* CertificationListDataSource.swift */,
+				AE56D9B9238F87DF00D31171 /* PersonListDataSource.swift */,
+				AE56D9BB238F8D4600D31171 /* ResultListDataSource.swift */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		AE56D9AF238F678B00D31171 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		AE56D9B2238F73DB00D31171 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AE56D9B3238F745800D31171 /* Alertable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,15 +256,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE204FA9238B379A00812BDD /* User.swift in Sources */,
 				AE21ECF723871D9B0075C45D /* Genre.swift in Sources */,
+				AE56D9B8238F83E900D31171 /* CertificationListDataSource.swift in Sources */,
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				AE21ECF923871DDA0075C45D /* Certification.swift in Sources */,
 				AE21ECF523871BCC0075C45D /* Movie.swift in Sources */,
 				AE21ECFB23871E4B0075C45D /* Person.swift in Sources */,
+				AE56D9AC238EBD4500D31171 /* MovieDetailViewController.swift in Sources */,
 				AE21ECF2238714280075C45D /* MovieNightClient.swift in Sources */,
+				AE204FAF238E17C300812BDD /* ResultsListViewController.swift in Sources */,
+				AE204FAB238B4A6E00812BDD /* CertificationListViewController.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
+				AE56D9B4238F745800D31171 /* Alertable.swift in Sources */,
+				AE56D9BA238F87DF00D31171 /* PersonListDataSource.swift in Sources */,
+				AE56D9BC238F8D4600D31171 /* ResultListDataSource.swift in Sources */,
+				AE56D9B6238F7FF600D31171 /* GenreListDataSource.swift in Sources */,
 				AE21ECE62384E07B0075C45D /* HomeViewController.swift in Sources */,
+				AE204FA7238B365E00812BDD /* GenreListViewController.swift in Sources */,
+				AE56D9B1238F67F600D31171 /* UIColor.swift in Sources */,
 				AE21ECEE238654A20075C45D /* Endpoint.swift in Sources */,
+				AE204FAD238B4AC300812BDD /* PersonListViewController.swift in Sources */,
 				AE21ECF02386DCA90075C45D /* MovieNight.swift in Sources */,
 				AE21ECEA238652DC0075C45D /* APIClient.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Certification: Decodable {
+struct Certification: Decodable, Equatable {
   let certification: String
   let meaning: String
   let order: Int

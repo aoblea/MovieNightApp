@@ -8,9 +8,11 @@
 
 import Foundation
 
-struct Genre: Decodable {
+struct Genre: Decodable, Equatable {
   let id: Int
   let name: String
+  
+  var isSelected = false
   
   private enum GenreCodingKeys: String, CodingKey {
     case id

@@ -47,8 +47,12 @@ class MovieNightClient: APIClient {
     fetch(with: request, completion: completion)
   }
   
-  func discover() {
+  func discoverMovies(certification: [Certification] , withPeople: [Person], withGenres: [Genre], completion: @escaping (Result<MovieResults, APIError>) -> Void) {
+    let endpoint = MovieNight.discover(api: apiKey, sortBy: .popularityDesc, country: "US", certification: certification, withPeople: withPeople, withGenres: withGenres)
+    let request = endpoint.request
+    print(request)
     
+    fetch(with: request, completion: completion)
   }
   
 }
