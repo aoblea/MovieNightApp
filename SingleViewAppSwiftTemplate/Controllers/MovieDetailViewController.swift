@@ -8,6 +8,7 @@
 
 import UIKit
 
+// TODO: - create a view model for this
 class MovieDetailViewController: UIViewController {
   
   @IBOutlet weak var movieImageView: UIImageView!
@@ -24,7 +25,12 @@ class MovieDetailViewController: UIViewController {
       self.title = movie.title
       releaseDateLabel.text = "Release Date: \(movie.releaseDate)"
       descriptionLabel.text = movie.overview
-      movieImageView.image = UIImage(named: "image-placeholder")
+      
+      if movie.imageState == .downloaded {
+        movieImageView.image = movie.image
+      } else {
+        movieImageView.image = UIImage(named: "image-placeholder")
+      }
     }
   }
     

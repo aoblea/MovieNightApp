@@ -10,7 +10,7 @@ import UIKit
 
 class CertificationListDataSource: NSObject, UITableViewDataSource {
   
-  private var data = [Certification]()
+  private var certifications = [Certification]()
   
   override init() {
     super.init()
@@ -22,7 +22,7 @@ class CertificationListDataSource: NSObject, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return data.count
+    return certifications.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,10 +33,10 @@ class CertificationListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: - Helper methods
   func object(at indexPath: IndexPath) -> Certification {
-    return data[indexPath.row]
+    return certifications[indexPath.row]
   }
   
   func update(with data: [Certification]) {
-    self.data = data
+    self.certifications = data
   }
 }

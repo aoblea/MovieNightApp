@@ -12,8 +12,8 @@ class ResultsListViewController: UITableViewController {
   
   // MARK: - Properties
   var movies: [Movie] = []
-  let dataSource = ResultListDataSource()
-  
+  lazy var dataSource = ResultListDataSource(movies: [], tableView: self.tableView)
+    
   // MARK: - Viewdidload
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,8 +29,9 @@ class ResultsListViewController: UITableViewController {
   
   // MARK: - Table view delegate methods
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "showMovieDetails", sender: self)
+    self.performSegue(withIdentifier: "showMovieDetails", sender: self)
   }
+
 }
 
 // MARK: - Navigation
@@ -41,7 +42,7 @@ extension ResultsListViewController {
         let movie = dataSource.object(at: indexPath)
         let detailViewController = segue.destination as? MovieDetailViewController
         guard let detailVC = detailViewController else { return }
-          detailVC.movie = movie
+        detailVC.movie = movie
       }
     }
   }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */; };
-		3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */; };
 		3A8AADCE1DF9B85E00A2B931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */; };
 		3A8AADD01DF9B85E00A2B931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */; };
 		3A8AADD31DF9B85E00A2B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */; };
@@ -33,12 +32,13 @@
 		AE56D9B8238F83E900D31171 /* CertificationListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9B7238F83E900D31171 /* CertificationListDataSource.swift */; };
 		AE56D9BA238F87DF00D31171 /* PersonListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9B9238F87DF00D31171 /* PersonListDataSource.swift */; };
 		AE56D9BC238F8D4600D31171 /* ResultListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9BB238F8D4600D31171 /* ResultListDataSource.swift */; };
+		AE56D9BE2391947200D31171 /* MovieDetailsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9BD2391947200D31171 /* MovieDetailsOperation.swift */; };
+		AE56D9C22391E81300D31171 /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56D9C12391E81300D31171 /* PendingOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A8AADC51DF9B85E00A2B931 /* Movie Night App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Night App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A8AADCD1DF9B85E00A2B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8AADD21DF9B85E00A2B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		AE56D9B7238F83E900D31171 /* CertificationListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationListDataSource.swift; sourceTree = "<group>"; };
 		AE56D9B9238F87DF00D31171 /* PersonListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListDataSource.swift; sourceTree = "<group>"; };
 		AE56D9BB238F8D4600D31171 /* ResultListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListDataSource.swift; sourceTree = "<group>"; };
+		AE56D9BD2391947200D31171 /* MovieDetailsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsOperation.swift; sourceTree = "<group>"; };
+		AE56D9C12391E81300D31171 /* PendingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,6 @@
 				AE56D9B2238F73DB00D31171 /* Protocols */,
 				AE56D9AD238F676900D31171 /* Extensions */,
 				AE21ECF323871BBF0075C45D /* Models */,
-				AE56D9AF238F678B00D31171 /* View Models */,
 				AE21ECE82384EA940075C45D /* Networking */,
 				AE21ECE72384EA860075C45D /* Controllers */,
 				AE56D9AE238F677400D31171 /* Data Sources */,
@@ -115,7 +116,6 @@
 		AE21ECE72384EA860075C45D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */,
 				AE21ECE52384E07B0075C45D /* HomeViewController.swift */,
 				AE204FA6238B365E00812BDD /* GenreListViewController.swift */,
 				AE204FAA238B4A6E00812BDD /* CertificationListViewController.swift */,
@@ -130,9 +130,11 @@
 			isa = PBXGroup;
 			children = (
 				AE21ECED238654A20075C45D /* Endpoint.swift */,
-				AE21ECEF2386DCA90075C45D /* MovieNight.swift */,
 				AE21ECE9238652DB0075C45D /* APIClient.swift */,
+				AE21ECEF2386DCA90075C45D /* MovieNight.swift */,
 				AE21ECF1238714280075C45D /* MovieNightClient.swift */,
+				AE56D9BD2391947200D31171 /* MovieDetailsOperation.swift */,
+				AE56D9C12391E81300D31171 /* PendingOperations.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -166,13 +168,6 @@
 				AE56D9BB238F8D4600D31171 /* ResultListDataSource.swift */,
 			);
 			path = "Data Sources";
-			sourceTree = "<group>";
-		};
-		AE56D9AF238F678B00D31171 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Models";
 			sourceTree = "<group>";
 		};
 		AE56D9B2238F73DB00D31171 /* Protocols */ = {
@@ -259,12 +254,13 @@
 				AE204FA9238B379A00812BDD /* User.swift in Sources */,
 				AE21ECF723871D9B0075C45D /* Genre.swift in Sources */,
 				AE56D9B8238F83E900D31171 /* CertificationListDataSource.swift in Sources */,
-				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
+				AE56D9C22391E81300D31171 /* PendingOperations.swift in Sources */,
 				AE21ECF923871DDA0075C45D /* Certification.swift in Sources */,
 				AE21ECF523871BCC0075C45D /* Movie.swift in Sources */,
 				AE21ECFB23871E4B0075C45D /* Person.swift in Sources */,
 				AE56D9AC238EBD4500D31171 /* MovieDetailViewController.swift in Sources */,
 				AE21ECF2238714280075C45D /* MovieNightClient.swift in Sources */,
+				AE56D9BE2391947200D31171 /* MovieDetailsOperation.swift in Sources */,
 				AE204FAF238E17C300812BDD /* ResultsListViewController.swift in Sources */,
 				AE204FAB238B4A6E00812BDD /* CertificationListViewController.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,

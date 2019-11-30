@@ -55,4 +55,13 @@ class MovieNightClient: APIClient {
     fetch(with: request, completion: completion)
   }
   
+  func getImage(with movie: Movie, completion: @escaping (Result<Data, APIError>) -> Void) {
+    guard let path = movie.posterPath else { return }
+    let endpoint = MovieNight.movie(imagePath: path)
+    let request = endpoint.request
+    print(request)
+    
+    fetch(with: request, completion: completion)
+  }
+  
 }

@@ -118,4 +118,21 @@ extension APIClient {
     task.resume()
   }
   
+  // fetch data
+  func fetch(with request: URLRequest, completion: @escaping (Result<Data, APIError>) -> Void) {
+    let task = dataTask(with: request) { (result) in
+      
+      DispatchQueue.main.async {
+        switch result {
+        case .success(let data):
+          completion(.success(data))
+        case .failure(let error):
+          completion(.failure(error))
+        }
+      }
+    }
+    
+    task.resume()
+  }
+  
 }

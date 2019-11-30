@@ -10,9 +10,13 @@ import UIKit
 
 class ResultListDataSource: NSObject, UITableViewDataSource {
   
-  private var data = [Movie]()
+  private var movies: [Movie]
+  let pendingOperations = PendingOperations()
+  let tableView: UITableView
   
-  override init() {
+  init(movies: [Movie], tableView: UITableView) {
+    self.movies = movies
+    self.tableView = tableView
     super.init()
   }
   
@@ -22,23 +26,46 @@ class ResultListDataSource: NSObject, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return data.count
+    return movies.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
     let movie = object(at: indexPath)
+    
     cell.textLabel?.text = movie.title
+    
+    if movie.imageState == .placeholder {
+      downloadMoviePoster(movie, at: indexPath)
+    }
     
     return cell
   }
   
   // MARK: - Helper methods
   func object(at indexPath: IndexPath) -> Movie {
-    return data[indexPath.row]
+    return movies[indexPath.row]
   }
   
   func update(with data: [Movie]) {
-    self.data = data
+    self.movies = data
   }
+  
+  func downloadMoviePoster(_ movie: Movie, at indexPath: IndexPath) {
+    if let _ = pendingOperations.downloadsInProgress[indexPath] { return }
+    
+    let downloader = MovieDetailsOperation(movie: movie)
+    
+    downloader.completionBlock = {
+      if downloader.isCancelled { return }
+    
+      DispatchQueue.main.async {
+        self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+      }
+    }
+    pendingOperations.downloadsInProgress[indexPath] = downloader
+    pendingOperations.downloadQueue.addOperation(downloader)
+  }
+  
 }

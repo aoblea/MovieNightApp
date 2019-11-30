@@ -10,7 +10,7 @@ import UIKit
 
 class PersonListDataSource: NSObject, UITableViewDataSource {
 
-  private var data = [Person]()
+  private var people = [Person]()
   
   override init() {
     super.init()
@@ -22,7 +22,7 @@ class PersonListDataSource: NSObject, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return data.count
+    return people.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,10 +35,10 @@ class PersonListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: - Helper methods
   func object(at indexPath: IndexPath) -> Person {
-    return data[indexPath.row]
+    return people[indexPath.row]
   }
   
   func update(with data: [Person]) {
-    self.data = data
+    self.people = data
   }
 }

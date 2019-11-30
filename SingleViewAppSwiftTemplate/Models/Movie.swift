@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Movie: Decodable {
   let id: Int
@@ -15,6 +16,15 @@ class Movie: Decodable {
   let overview: String
   let releaseDate: String
   
+  // Movie Image
+  enum ImageDownloadState {
+    case placeholder, downloaded, failed
+  }
+  
+  let posterPath: String?
+  var image: UIImage? = nil
+  var imageState: ImageDownloadState = .placeholder
+  
   private enum MovieCodingKeys: String, CodingKey {
     case id
     case originalTitle
@@ -22,14 +32,16 @@ class Movie: Decodable {
     case title
     case overview
     case releaseDate
+    case posterPath 
   }
   
-  init(id: Int, originalTitle: String, genreIDs: [Genre?], title: String, overview: String, releaseDate: String) {
+  init(id: Int, originalTitle: String, genreIDs: [Genre?], title: String, overview: String, releaseDate: String, imagePath: String?) {
     self.id = id
     self.originalTitle = originalTitle
     self.title = title
     self.overview = overview
     self.releaseDate = releaseDate
+    self.posterPath = imagePath
   }
   
   required init(from decoder: Decoder) throws {
@@ -39,6 +51,7 @@ class Movie: Decodable {
     self.title = try container.decode(String.self, forKey: .title)
     self.overview = try container.decode(String.self, forKey: .overview)
     self.releaseDate = try container.decode(String.self, forKey: .releaseDate)
+    self.posterPath = try container.decodeIfPresent(String.self, forKey: .posterPath)
   }
 }
 

@@ -88,7 +88,6 @@ class HomeViewController: UIViewController, Alertable {
   }
 }
 
-
 extension HomeViewController {
   // MARK: - Helper Methods
   // FIXME: - Needs refactoring, maybe create a generic function to remove duplicates from an array
@@ -125,7 +124,6 @@ extension HomeViewController {
     }
     return filteredPeople
   }
-  
 }
 
 // MARK: - UserSelections delegate methods
@@ -210,5 +208,4 @@ extension HomeViewController {
         }
     }
   }
-  
 }

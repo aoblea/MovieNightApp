@@ -23,10 +23,18 @@ enum MovieNight {
   case genre(api: String)
   case people(api: String, page: Int)
   case discover(api: String, sortBy: MovieNightSortType, country: String, certification: [Certification], withPeople: [Person], withGenres: [Genre])
+  case movie(imagePath: String)
 }
 
 extension MovieNight: Endpoint {
-  var base: String { return "https://api.themoviedb.org" }
+  var base: String {
+    switch self {
+    case .movie:
+      return "https://image.tmdb.org" // for movie image
+    default:
+      return "https://api.themoviedb.org"
+    }
+  }
   
   var path: String {
     switch self {
@@ -34,6 +42,7 @@ extension MovieNight: Endpoint {
     case .genre: return "/3/genre/movie/list"
     case .people: return "/3/person/popular"
     case .discover: return "/3/discover/movie"
+    case .movie(let imagePath): return "/t/p/w500\(imagePath)"
     }
   }
   
@@ -54,6 +63,7 @@ extension MovieNight: Endpoint {
         URLQueryItem(name: "with_people", value: withPeople.compactMap { $0.id.description }.joined(separator: "|")),
         URLQueryItem(name: "with_genres", value: withGenres.compactMap { $0.id.description }.joined(separator: "|"))
       ]
+    case .movie: return []
     }
   }
   
@@ -72,4 +82,8 @@ For Testing Purposes:
 
  // Discover Movies 
  https://api.themoviedb.org/3/discover/movie?api_key=34d74b3c4d3a6d099c7422cb6b1a5c77&sort_by=popularity.desc&certification_country=US&certification=G&with_people=1%2C4
+ 
+ // Movie Image Retrieval
+ https://image.tmdb.org/t/p/w500 '/lcq8dVxeeOqHvvgcte707K0KVx5.jpg'
+ 
 */

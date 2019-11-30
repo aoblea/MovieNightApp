@@ -10,7 +10,7 @@ import UIKit
 
 class GenreListDataSource: NSObject, UITableViewDataSource {
   
-  private var data = [Genre]()
+  private var genres = [Genre]()
   
   override init() {
     super.init()
@@ -22,7 +22,7 @@ class GenreListDataSource: NSObject, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return data.count
+    return genres.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,10 +35,10 @@ class GenreListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: - Helper methods
   func object(at indexPath: IndexPath) -> Genre {
-    return data[indexPath.row]
+    return genres[indexPath.row]
   }
   
   func update(with data: [Genre]) {
-    self.data = data
+    self.genres = data
   }
 }
